@@ -1,3 +1,6 @@
+# I pledge my honor that I have abided by the Stevens Honor System
+# - Mitchell Reiff
+
 def hello_world():
     # Write some thing in the following doc string
     """This text will go in the doc string for the hello world function"""
