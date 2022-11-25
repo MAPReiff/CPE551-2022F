@@ -23,7 +23,7 @@ In order to avoid any confusion, I used a set of rules provided by [Bicycle Card
 
 ## Notes
 
-- As the game does not end until one player has all 52 cards, and the order of the cards is randomized, it is possible (but highly unlikely) the game could go on ***forever**.
+- As the game does not end until one player has all 52 cards, and the order of the cards is randomized, it is possible (but highly unlikely) the game could go on **forever**.
 
 ## Sources
 
