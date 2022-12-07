@@ -118,6 +118,18 @@ class Hand(Deck):
         s += " contains\n" + Deck.__str__(self)  # add the cards in the hand
         return s
 
+    def shuffle(self):  # shuffle the player's hand
+        n_cards = len(self.cards)  # number of cards in the hand
+        for i in range(n_cards):  # for each card in the hand
+            # pick a random card to swap with
+            j = random.randrange(i, n_cards)
+            # swap the cards
+            self.cards[i], self.cards[j] = self.cards[j], self.cards[i]
+            # I added this in to help solve a bug that occurs when a user wins
+            # a card, that card is what would be played next. As War does not
+            # depend on card order, I will shuffle each player's hand between
+            # rounds to minimize the chance of this happening.
+
 ############################################################################################################
 
 
@@ -295,6 +307,10 @@ while gameOver != True:
               color.BOLD + "winner!" + color.END + "\n\n")
         gameOver = True
         break
+    
+    # Shuffle player hands
+    human.shuffle()
+    computer.shuffle()
 
     # Timer for the next round
     roundCountdown(timer)
